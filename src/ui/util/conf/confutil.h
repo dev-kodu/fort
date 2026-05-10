@@ -2,7 +2,6 @@
 #define CONFUTIL_H
 
 #include <QObject>
-#include <QRegularExpressionMatch>
 
 class ConfUtil
 {
@@ -15,7 +14,7 @@ public:
 
     static int zoneMaxCount();
 
-    static QRegularExpressionMatch matchWildcard(const QStringView path);
+    static int wildcardPos(const QStringView path);
     static bool hasWildcard(const QString &path);
 
     static QString parseAppPath(const QStringView line, bool &isWild, bool &isPrefix);
