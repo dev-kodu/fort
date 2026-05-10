@@ -47,7 +47,7 @@
 
 namespace {
 
-constexpr Qt::WindowFlags dialogFlags =
+inline constexpr Qt::WindowFlags dialogFlags =
         Qt::Dialog | Qt::WindowMaximizeButtonHint | Qt::WindowCloseButtonHint;
 
 }

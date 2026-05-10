@@ -25,7 +25,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr int RULES_HEADER_VERSION = 2;
+inline constexpr int RULES_HEADER_VERSION = 2;
 
 constexpr quint8 ruleTypeBit(Rule::RuleType ruleType)
 {

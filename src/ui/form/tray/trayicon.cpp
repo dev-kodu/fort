@@ -32,8 +32,8 @@ using namespace Fort;
 
 namespace {
 
-constexpr int MAX_FKEY_COUNT = 12;
-constexpr int MAX_RULE_ACTIONS_COUNT = 8;
+inline constexpr int MAX_FKEY_COUNT = 12;
+inline constexpr int MAX_RULE_ACTIONS_COUNT = 8;
 
 const QString eventSingleClick = QStringLiteral("singleClick");
 const QString eventCtrlSingleClick = QStringLiteral("ctrlSingleClick");

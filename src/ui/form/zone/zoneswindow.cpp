@@ -28,7 +28,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr int ZONES_HEADER_VERSION = 3;
+inline constexpr int ZONES_HEADER_VERSION = 3;
 
 }
 

@@ -12,7 +12,7 @@
 
 #include "worker_types.h"
 
-constexpr unsigned long WORKER_TIMEOUT_MSEC = 5000;
+inline constexpr unsigned long WORKER_TIMEOUT_MSEC = 5000;
 
 class WorkerManager : public QObject
 {

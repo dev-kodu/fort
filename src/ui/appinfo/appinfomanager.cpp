@@ -16,10 +16,10 @@ namespace {
 
 const QLoggingCategory LC("appInfo");
 
-constexpr int DATABASE_USER_VERSION = 7;
+inline constexpr int DATABASE_USER_VERSION = 7;
 
-constexpr int APP_CACHE_MAX_COUNT = 3000;
-constexpr int APP_PURGE_INTERVAL = 3000; // 3 seconds
+inline constexpr int APP_CACHE_MAX_COUNT = 3000;
+inline constexpr int APP_PURGE_INTERVAL = 3000; // 3 seconds
 
 const char *const sqlSelectAppInfo = "SELECT alt_path, file_descr, company_name,"
                                      "    product_name, product_ver, file_mod_time, icon_id"

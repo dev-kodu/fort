@@ -11,7 +11,7 @@ namespace {
 
 const QLoggingCategory LC("util.iconCache");
 
-constexpr int CacheLimitCount = 200; // icons max count
+inline constexpr int CacheLimitCount = 200; // icons max count
 
 static struct IconCachePrivate
 {

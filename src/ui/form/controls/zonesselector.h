@@ -5,7 +5,7 @@
 
 QT_FORWARD_DECLARE_CLASS(QVBoxLayout)
 
-constexpr int DefaultMaxZoneCount = 32;
+inline constexpr int DefaultMaxZoneCount = 32;
 
 class ZonesSelector : public PushButton
 {

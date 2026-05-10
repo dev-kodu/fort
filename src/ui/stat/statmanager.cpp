@@ -28,9 +28,9 @@ namespace {
 
 const QLoggingCategory LC("stat");
 
-constexpr int DATABASE_USER_VERSION = 10;
+inline constexpr int DATABASE_USER_VERSION = 10;
 
-constexpr qint64 INVALID_APP_ID = Q_INT64_C(-1);
+inline constexpr qint64 INVALID_APP_ID = Q_INT64_C(-1);
 
 bool migrateFunc(SqliteDb *db, int version, bool isNewDb, void *ctx)
 {
