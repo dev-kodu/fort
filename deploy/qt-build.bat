@@ -20,16 +20,14 @@ cd %TARGET_PATH%
 	-submodules qtbase ^
 	^
 	-no-feature-columnview -no-feature-commandlinkbutton ^
-	-no-feature-concatenatetablesproxymodel ^
 	-no-feature-concurrent -no-feature-datawidgetmapper -no-feature-dial ^
 	-no-feature-dockwidget -no-feature-filesystemwatcher -no-feature-fontcombobox ^
 	-no-feature-fontdialog -no-feature-inputdialog ^
-	-no-feature-hijricalendar -no-feature-identityproxymodel ^
-	-no-feature-islamiccivilcalendar -no-feature-jalalicalendar ^
+	-no-feature-hijricalendar -no-feature-islamiccivilcalendar -no-feature-jalalicalendar ^
 	-no-feature-itemmodeltester -no-feature-lcdnumber -no-feature-listwidget ^
 	-no-feature-mdiarea -no-feature-movie -no-feature-pdf -no-feature-picture ^
-	-no-feature-printsupport -no-feature-raster-64bit ^
-	-no-feature-textbrowser -no-feature-textodfwriter ^
+	-no-feature-printsupport -no-feature-proxymodel -no-feature-rangemodel ^
+	-no-feature-raster-64bit -no-feature-textbrowser -no-feature-textodfwriter ^
 	-no-feature-undocommand -no-feature-undogroup -no-feature-undostack -no-feature-undoview ^
 	-no-feature-whatsthis -no-feature-wizard ^
 	^
