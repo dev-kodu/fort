@@ -71,14 +71,16 @@ way upstream does (e.g. "UI: Update SQLite to 3.53.0").
 ## Build
 
 > **READ THIS FIRST: our checked-out `master` (`e20f0b8b`) DOES NOT COMPILE.**
-> `src/ui/util/conf/confutil.cpp` fails with
+> `src/ui/util/conf/confutil.cpp(41)` fails with
 > `error C2679: binary '||': no operator found which takes a right-hand operand of type
-> 'QRegularExpressionMatch'`. This is an **upstream** defect, fixed upstream *after* our snapshot.
-> **Fix: `git merge upstream/master` (or rebase onto it)** — upstream's `e3369bb0` removes the
-> broken function. See Traps. Do not hand-patch it; upstream already solved it.
+> 'QRegularExpressionMatch'`, and `nmake` exits `2`.
+> **This is the only error in the tree** — a full build compiles ~280 other translation units
+> cleanly, so nothing else is known-broken. It is an **upstream** defect, fixed upstream *after* our
+> snapshot. **Fix: `git merge upstream/master` (or rebase onto it)** — upstream's `e3369bb0` removes
+> the broken function. See Traps. Do not hand-patch it; upstream already solved it.
 
-The commands below are **verified on this machine, 2026-07-17**: qmake generates cleanly and the
-tree compiles up to the broken file.
+The commands below are **verified on this machine, 2026-07-17** by a full run: qmake exits 0 and the
+tree compiles up to the one broken file above.
 
 Toolchain actually present here:
 - Qt **6.9.1** — `D:\Qt\Qt6.9.1\6.9.1\msvc2022_64`
@@ -150,7 +152,8 @@ command. `qmake` degrades quietly (`requires(exists(...))` → the tests just dr
   - Upstream `9a2f7e35` (2025-12-05) changed `ConfUtil::matchWildcard` — which returns
     `QRegularExpressionMatch` — to `return path.startsWith('[') || StringUtil::match(...);`.
     That is `bool || QRegularExpressionMatch`, and `QRegularExpressionMatch` has no `operator bool`.
-    **It does not compile.**
+    **It does not compile** — verified twice: an isolated compile against Qt 6.9.1, and a full
+    `nmake` run that built ~280 other files and died only here (`confutil.cpp(41)`, C2679).
   - It sat on upstream `master` for **13 commits / ~5 months**, because **there is no CI**
     (see below). No release shipped broken: the last tag is `v3.19.9` (2025-10-11) and master has
     been on an unreleased `3.20.0` the whole time.
