@@ -34,16 +34,19 @@ int ConfUtil::zoneMaxCount()
     return FORT_CONF_ZONE_MAX;
 }
 
-QRegularExpressionMatch ConfUtil::matchWildcard(const QStringView path)
+int ConfUtil::wildcardPos(const QStringView path)
 {
+    if (path.startsWith('['))
+        return 0;
+
     static const QRegularExpression wildMatcher("([*?])");
 
-    return path.startsWith('[') || StringUtil::match(wildMatcher, path);
+    return StringUtil::match(wildMatcher, path).capturedStart();
 }
 
 bool ConfUtil::hasWildcard(const QString &path)
 {
-    return matchWildcard(path).hasMatch();
+    return wildcardPos(path) >= 0;
 }
 
 QString ConfUtil::parseAppPath(const QStringView line, bool &isWild, bool &isPrefix)
@@ -60,10 +63,9 @@ QString ConfUtil::parseAppPath(const QStringView line, bool &isWild, bool &isPre
         path = path.mid(1);
         isWild = true;
     } else {
-        const auto wildMatch = matchWildcard(path);
-        if (wildMatch.hasMatch()) {
-            if (wildMatch.capturedStart() == path.size() - 2
-                    && path.endsWith(QLatin1String("**"))) {
+        const auto wildPos = wildcardPos(path);
+        if (wildPos >= 0) {
+            if (wildPos == path.size() - 2 && path.endsWith(QLatin1String("**"))) {
                 path.chop(2);
                 isPrefix = true;
             } else {

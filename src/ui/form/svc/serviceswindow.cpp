@@ -28,7 +28,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr int SERVICES_HEADER_VERSION = 2;
+inline constexpr int SERVICES_HEADER_VERSION = 2;
 
 }
 

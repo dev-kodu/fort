@@ -23,9 +23,9 @@ using namespace Fort;
 
 namespace {
 
-constexpr int maxClientsCount = 9;
-
 const QLoggingCategory LC("control");
+
+inline constexpr int maxClientsCount = 9;
 
 }
 

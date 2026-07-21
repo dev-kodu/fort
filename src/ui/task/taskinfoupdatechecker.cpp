@@ -13,7 +13,7 @@ namespace {
 
 const QLoggingCategory LC("task.updateChecker");
 
-constexpr int TASK_INFO_VERSION = 3;
+inline constexpr int TASK_INFO_VERSION = 3;
 
 }
 

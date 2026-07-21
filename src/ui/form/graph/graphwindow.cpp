@@ -23,7 +23,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr int stickyDistance = 30;
+inline constexpr int stickyDistance = 30;
 
 inline void checkWindowHorizontalEdges(const QRect &screenRect, const QRect &winRect, QPoint &diff)
 {

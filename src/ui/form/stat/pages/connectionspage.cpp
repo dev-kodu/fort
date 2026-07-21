@@ -26,7 +26,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr int CONN_LIST_HEADER_VERSION = 5;
+inline constexpr int CONN_LIST_HEADER_VERSION = 5;
 
 }
 

@@ -29,7 +29,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr int trayMaxGroups = 16;
+inline constexpr int trayMaxGroups = 16;
 
 void setAlertModeIcon(QCheckBox *cb, FirewallConf::FilterMode mode)
 {

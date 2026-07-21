@@ -4,7 +4,7 @@
 
 namespace {
 
-constexpr int FORMAT_POWER_VALUES_SIZE = 7;
+inline constexpr int FORMAT_POWER_VALUES_SIZE = 7;
 
 bool isBase1000(FormatUtil::SizeFormat format)
 {

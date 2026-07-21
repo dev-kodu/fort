@@ -32,7 +32,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr int APP_LIST_HEADER_VERSION = 1;
+inline constexpr int APP_LIST_HEADER_VERSION = 1;
 
 }
 

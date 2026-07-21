@@ -16,7 +16,7 @@ namespace {
 
 const QLoggingCategory LC("db");
 
-constexpr int DATABASE_BUSY_TIMEOUT = 3000; // 3 seconds
+inline constexpr int DATABASE_BUSY_TIMEOUT = 3000; // 3 seconds
 
 const char *const defaultSqlPragmas = "PRAGMA journal_mode = WAL;"
                                       "PRAGMA locking_mode = NORMAL;"
