@@ -38,7 +38,8 @@ using namespace Fort;
 
 namespace {
 
-constexpr int speedLimitDisabledIndex = 1;
+inline constexpr int speedLimitDisabledIndex = 1;
+
 const std::array speedLimitValues = { 10, 0, 20, 30, 50, 75, 100, 150, 200, 300, 500, 900, 1024,
     qRound(1.5 * 1024), 2 * 1024, 3 * 1024, 5 * 1024, qRound(7.5 * 1024), 10 * 1024, 15 * 1024,
     20 * 1024, 30 * 1024, 50 * 1024 };

@@ -20,11 +20,11 @@ using namespace Fort;
 
 namespace {
 
-constexpr QColor alertColor = QColorConstants::Svg::orange;
-constexpr QColor allowColor = QColorConstants::Svg::green;
-constexpr QColor blockColor = QColorConstants::Svg::red;
-constexpr QColor killProcessColor = QColorConstants::Svg::magenta;
-constexpr QColor inactiveColor = QColorConstants::Svg::slategray;
+inline constexpr QColor alertColor = QColorConstants::Svg::orange;
+inline constexpr QColor allowColor = QColorConstants::Svg::green;
+inline constexpr QColor blockColor = QColorConstants::Svg::red;
+inline constexpr QColor killProcessColor = QColorConstants::Svg::magenta;
+inline constexpr QColor inactiveColor = QColorConstants::Svg::slategray;
 
 QVariant dataDisplayName(const App &app, int role)
 {

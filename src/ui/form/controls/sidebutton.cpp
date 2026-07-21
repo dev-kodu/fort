@@ -4,7 +4,7 @@
 
 namespace {
 
-constexpr int indicatorWidth = 3;
+inline constexpr int indicatorWidth = 3;
 
 }
 

@@ -14,8 +14,8 @@
 
 namespace {
 
-constexpr int COFF_MAGIC_OFFSET = 20;
-constexpr int COFF_CHECKSUM_OFFSET = COFF_MAGIC_OFFSET + 64;
+inline constexpr int COFF_MAGIC_OFFSET = 20;
+inline constexpr int COFF_CHECKSUM_OFFSET = COFF_MAGIC_OFFSET + 64;
 
 constexpr quint16 readUInt16(const char *cp, int offset)
 {

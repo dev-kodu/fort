@@ -13,8 +13,8 @@
 
 namespace {
 
-constexpr qint64 INVALID_APP_ID = Q_INT64_C(-1);
-constexpr int MAX_LOG_BLOCKED_IP_MERGE_COUNT = 1000;
+inline constexpr qint64 INVALID_APP_ID = Q_INT64_C(-1);
+inline constexpr int MAX_LOG_BLOCKED_IP_MERGE_COUNT = 1000;
 
 }
 

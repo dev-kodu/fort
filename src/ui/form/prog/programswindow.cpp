@@ -36,7 +36,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr int APPS_HEADER_VERSION = 13;
+inline constexpr int APPS_HEADER_VERSION = 13;
 
 const std::array timerMinuteValues = { -1, 1, 5, 10, 30, 60 * 1, 60 * 3, 60 * 6 };
 

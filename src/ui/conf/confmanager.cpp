@@ -30,9 +30,9 @@ namespace {
 
 const QLoggingCategory LC("conf");
 
-constexpr int DATABASE_USER_VERSION = 57;
+inline constexpr int DATABASE_USER_VERSION = 57;
 
-constexpr int CONF_PERIODS_UPDATE_INTERVAL = 60 * 1000; // 1 minute
+inline constexpr int CONF_PERIODS_UPDATE_INTERVAL = 60 * 1000; // 1 minute
 
 const char *const sqlSelectAddressGroups = "SELECT addr_group_id, include_all, exclude_all,"
                                            "    include_zones, exclude_zones,"

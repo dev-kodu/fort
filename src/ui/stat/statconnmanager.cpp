@@ -23,7 +23,7 @@ namespace {
 
 const QLoggingCategory LC("statConn");
 
-constexpr int DATABASE_USER_VERSION = 7;
+inline constexpr int DATABASE_USER_VERSION = 7;
 
 bool migrateFunc(SqliteDb *db, int version, bool isNewDb, void *ctx)
 {

@@ -18,16 +18,16 @@
 
 namespace {
 
-constexpr RegKey::Root regCurUserRoot = RegKey::HKCU;
+inline constexpr RegKey::Root regCurUserRoot = RegKey::HKCU;
 const char *const regCurUserRun = R"(SOFTWARE\Microsoft\Windows\CurrentVersion\Run)";
 
-constexpr RegKey::Root regAllUsersRoot = RegKey::HKLM;
+inline constexpr RegKey::Root regAllUsersRoot = RegKey::HKLM;
 const char *const regAllUsersRun = R"(SOFTWARE\Microsoft\Windows\CurrentVersion\Run)";
 
-constexpr RegKey::Root regShellRoot = RegKey::HKCU;
+inline constexpr RegKey::Root regShellRoot = RegKey::HKCU;
 const char *const regShellMenu = R"(SOFTWARE\Classes\SystemFileAssociations\.exe\Shell)";
 
-constexpr RegKey::Root regSoundRoot = RegKey::HKCU;
+inline constexpr RegKey::Root regSoundRoot = RegKey::HKCU;
 const char *const regSoundApps = R"(AppEvents\Schemes\Apps)";
 
 const wchar_t *const serviceNameStr = L"" APP_BASE_L L"Svc";

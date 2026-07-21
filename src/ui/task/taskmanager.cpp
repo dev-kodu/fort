@@ -13,9 +13,9 @@ using namespace Fort;
 
 namespace {
 
-constexpr int TIMER_STARTUP_SECONDS = 1;
-constexpr int TIMER_DEFAULT_SECONDS = 5;
-constexpr int TIMER_MAX_SECONDS = 24 * 60 * 60; // 1 day
+inline constexpr int TIMER_STARTUP_SECONDS = 1;
+inline constexpr int TIMER_DEFAULT_SECONDS = 5;
+inline constexpr int TIMER_MAX_SECONDS = 24 * 60 * 60; // 1 day
 
 }
 

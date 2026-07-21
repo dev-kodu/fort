@@ -22,7 +22,7 @@ using namespace Fort;
 
 namespace {
 
-constexpr auto iconSize = QSize(16, 16);
+inline constexpr auto iconSize = QSize(16, 16);
 
 QGroupBox *createGroupBox()
 {
