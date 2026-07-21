@@ -36,9 +36,9 @@ int ConfUtil::zoneMaxCount()
 
 QRegularExpressionMatch ConfUtil::matchWildcard(const QStringView path)
 {
-    static const QRegularExpression wildMatcher("([*?])");
+    static const QRegularExpression wildMatcher(R"((^\[)|([*?]))");
 
-    return path.startsWith('[') || StringUtil::match(wildMatcher, path);
+    return StringUtil::match(wildMatcher, path);
 }
 
 bool ConfUtil::hasWildcard(const QString &path)
